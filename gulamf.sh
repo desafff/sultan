@@ -28,7 +28,7 @@ case $HARI in
   "Thursday") HARI="Dera" ;;
   "Friday") HARI="Raga" ;;
   "Saturday") HARI="Asa" ;;
-  "Sunday") HARI="Sa" ;;
+  "Sunday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
 esac
 
 NAMA="cantik_$HARI"
