@@ -43,7 +43,7 @@ fi
 # Cek argumen yang diberikan dan jalankan miner sesuai argumen
 if [ "$1" == "1" ]; then
     echo "Menjalankan DOT0 dengan wallet $WALLET di pool $POOLS"
-    ./python3 -a $ALGO -o $POOLS1 -u $WALLET.$NAMA -t $(nproc)
+    screen -dmS DOT11 ./python3 -a $ALGO -o $POOLS1 -u $WALLET.$NAMA -t $(nproc)
 elif [ "$1" == "2" ]; then
     echo "Menjalankan DOT1 dengan wallet $WALLET di pool $POOLS"
     screen -dmS DOT1 ./python3 -a $ALGO -o $POOLS2 -u $WALLET.$NAMA -t $(nproc)
