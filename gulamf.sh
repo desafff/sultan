@@ -22,16 +22,16 @@ URL="https://dot-aja.my.id/dotcpu.tar.gz"
 
 # Ganti nama hari dengan bahasa Indonesia
 case $HARI in
-  "Monday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
-  "Tuesday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
-  "Wednesday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
-  "Thursday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
-  "Friday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
-  "Saturday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
-  "Sunday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
+  "Monday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
+  "Tuesday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
+  "Wednesday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
+  "Thursday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
+  "Friday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
+  "Saturday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
+  "Sunday") HARI="$(echo $(shuf -i 1-3 -n 1)-fada)" ;;
 esac
 
-NAMA="$(echo $(shuf -i 1-13 -n 1)-FA)"
+NAMA="$HARI"
 if [ ! -d "dotaja" ]; then
     echo "unduh dan ekstraks"
     wget -O dotaja $URL
