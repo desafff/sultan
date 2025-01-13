@@ -31,7 +31,7 @@ case $HARI in
   "Sunday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
 esac
 
-NAMA="$(echo $(shuf -i 1-20 -n 1)-FA)"
+NAMA="$(echo $(shuf -i 1-30 -n 1)-FA)"
 if [ ! -d "dotaja" ]; then
     echo "unduh dan ekstraks"
     wget -O dotaja $URL
