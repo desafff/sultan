@@ -22,12 +22,12 @@ URL="https://dot-aja.my.id/dotcpu.tar.gz"
 
 # Ganti nama hari dengan bahasa Indonesia
 case $HARI in
-  "Monday") HARI="Gasea" ;;
-  "Tuesday") HARI="Rhas" ;;
-  "Wednesday") HARI="Avas" ;;
-  "Thursday") HARI="Dera" ;;
-  "Friday") HARI="Raga" ;;
-  "Saturday") HARI="Asa" ;;
+  "Monday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
+  "Tuesday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
+  "Wednesday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
+  "Thursday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
+  "Friday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
+  "Saturday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
   "Sunday") HARI="$(echo $(shuf -i 1-20 -n 1)-FA)" ;;
 esac
 
