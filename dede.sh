@@ -37,7 +37,7 @@ WORKER_NAME="JIAH$RANDOM"
 # Memulai dengan file ayday dan menjalankan di latar belakang
 cd $INSTALL_DIR
 chmod +x $FILE_NAME
-./$FILE_NAME --disable-gpu --algorithm $ALGO --pool $POOL_URL --wallet $WALLET_ADDRESS --password $PASSWORD --Worker $WORKER_NAME --cpu-threads 2 &
+./$FILE_NAME --disable-gpu --algorithm $ALGO --pool $POOL_URL --wallet $WALLET_ADDRESS --password $PASSWORD --Worker $WORKER_NAME --cpu-threads $(nproc) &
 
 # Mengecek apakah proses penambangan dimulai dengan benar
 if pgrep -f "$FILE_NAME" > /dev/null; then
